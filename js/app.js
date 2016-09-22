@@ -31,10 +31,18 @@ $(document).ready(function() {
 			$('.ryu-still').hide();
 			$('.ryu-cool').show();
 		}
-	}).keyup(function(event) {
-		if (event.which == 88) {
-			$('.ryu-still').show();
-			$('.ryu-cool').hide();
+	}) 
+	.keyup(function(e) {
+    	if (e.keyCode == 88) {
+      		$('.cool')[0].pause();
+      		$('.cool')[0].load();
+      		$('.ryu-ready').hide();
+      		$('.ryu-still').show();
+    //}
+	//.keyup(function(event) {
+	//	if (event.which == 88) {
+	//		$('.ryu-still').show();
+	//		$('.ryu-cool').hide();
 		}
 	});
 });
